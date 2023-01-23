@@ -12,8 +12,7 @@ import os
 st.set_page_config(page_title='Sri Lanka Small Tanks Data Analysis Result', page_icon=':tada', layout='wide')
 st.header('Sri Lanka Small Tanks Data Analysis')
 st.write('_data source: UNDP small tanks database_')
-st.info('This app was made for an internal presentation of descriptive analysis on Small tanks in Sri Lanka to South Asia Water team and Country office team.')
-st.info('Last modified: 2022/10, by Qiao Wang')
+st.info('This app was made for an internal presentation of descriptive analysis on Small tanks in Sri Lanka to South Asia Water team and Country office team. Last modified: 2022/10, by Qiao Wang')
 st.write('Researh questions:')
 st.write(
     """
@@ -131,7 +130,7 @@ with st.container():
 
     with right_column:
         st.plotly_chart(func_reno_bar)
-st.wirte("The age of the tanks doesn't immediately correlate with the level of functionality.")
+st.wirte('The age of the tanks doesn not immediately correlate with the level of functionality.')
 
 ### --- BAR CHART: TANK UTILIZATION (MULTIPLE CHOICES)
 utili_df = round(tank_df[['_4_1irrigatedagriculture', '_4_2fishing', '_4_3livestock', '_4_4daytodayuse', '_4_5smallscaleindustries', '_4_6environmentaluse', '_4_7ecotourism']].mean()*100, 2).reset_index()
