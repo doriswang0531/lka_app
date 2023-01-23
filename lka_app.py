@@ -176,9 +176,9 @@ st.write('The largest usage of tanks is for irrigation only.')
 
 
 ### --- SPATIAL DISTRIBUTION: TANK UTILIZATION
-image1 = Image.open(os.path.join('maps/tank_irri.jpg')
-image2 = Image.open(os.path.join('maps/tank_agri.jpg')
-image3 = Image.open(os.path.join('maps/tank_agri_day.jpg')
+image1 = Image.open('maps/tank_irri.jpg')
+image2 = Image.open('maps/tank_agri.jpg')
+image3 = Image.open('maps/tank_agri_day.jpg')
 
 st.write('---')
 st.markdown('##### 5 Tank spatial distribution by utilization')
