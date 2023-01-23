@@ -186,7 +186,7 @@ with st.container():
     left_column, middle_column, right_column = st.columns(3)
     with left_column:
         st.write('Irrigation Only')
-        st.image(image1, width=400)
+        st.image(image1, width=350)
     with middle_column:
         st.write('Agriculture (Irrigation/Fishing/Livestock')
         st.image(image2, width=400)
