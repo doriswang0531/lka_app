@@ -173,3 +173,23 @@ with st.container():
         st.write('_among 14,515 small tanks_')
         st.dataframe(utility_df)
 st.write('The largest usage of tanks is for irrigation only.')
+
+
+### --- SPATIAL DISTRIBUTION: TANK UTILIZATION
+image1 = Image.open(os.path.join('maps/tank_irri.jpg')
+image2 = Image.open(os.path.join('maps/tank_agri.jpg')
+image3 = Image.open(os.path.join('maps/tank_agri_day.jpg')
+
+st.write('---')
+st.markdown('##### 5 Tank spatial distribution by utilization')
+with st.container():
+    left_column, middle_column, right_column = st.columns(3)
+    with left_column:
+        st.write('Irrigation Only')
+        st.image(image1, width=400)
+    with middle_column:
+        st.write('Agriculture (Irrigation/Fishing/Livestock')
+        st.image(image2, width=400)
+    with right_column:
+        st.write('Agriculture and Day-to-day')
+        st.image(image3, width=400)
