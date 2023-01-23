@@ -13,7 +13,7 @@ st.set_page_config(page_title='Sri Lanka Small Tanks Data Analysis Result', page
 st.header('Sri Lanka Small Tanks Data Analysis')
 st.write('_data source: UNDP small tanks database_')
 st.info('This app was made for an internal presentation of descriptive analysis on Small tanks in Sri Lanka to South Asia Water team and Country office team.')
-st.info('Last modified: 2022/10, by Qiao Wang)
+st.info('Last modified: 2022/10, by Qiao Wang')
 st.write('Researh questions:')
 st.write(
     """
