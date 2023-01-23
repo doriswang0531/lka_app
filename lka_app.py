@@ -130,7 +130,7 @@ with st.container():
 
     with right_column:
         st.plotly_chart(func_reno_bar)
-st.wirte('The age of the tanks doesn not immediately correlate with the level of functionality.')
+st.write('The age of the tanks does not immediately correlate with the level of functionality.')
 
 ### --- BAR CHART: TANK UTILIZATION (MULTIPLE CHOICES)
 utili_df = round(tank_df[['_4_1irrigatedagriculture', '_4_2fishing', '_4_3livestock', '_4_4daytodayuse', '_4_5smallscaleindustries', '_4_6environmentaluse', '_4_7ecotourism']].mean()*100, 2).reset_index()
