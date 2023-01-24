@@ -7,7 +7,7 @@
 
 ## About The Project
 
-This piece of work is part of Sri Lanka Water Platform Diagnostics which is consist of Public Expenditure Review (PER), Economy Analysis of WASH, predictive modeling for drought, integrating flood and drought risks analysis and population at risk, analysis of Comminuty-Based Organizations(CBOs), and aggregate water risk for Sri Lanka — drought, flood and water quality. 
+This project is part of Sri Lanka Water Platform Diagnostics Analytic Work which is consist of Public Expenditure Review (PER), Economy Analysis of WASH, predictive modeling for drought, integrating flood and drought risks analysis and population at risk, analysis of Comminuty-Based Organizations(CBOs), and aggregate water risk for Sri Lanka — drought, flood and water quality. 
 
 ## App Preview
 <img src='imgs\Screenshot.png' width="800">
