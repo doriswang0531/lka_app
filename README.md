@@ -13,7 +13,7 @@ This piece of work is part of Sri Lanka Water Platform Diagnotics which is consi
 <img src='imgs\Screenshot.png' width="800">
 
 
-## APP Demo
+## App Demo
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://doriswang0531-lka-tank-app-lka-app-y2bwa3.streamlit.app/)
 
