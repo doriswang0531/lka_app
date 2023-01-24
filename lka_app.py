@@ -304,18 +304,18 @@ image8 = Image.open('maps/asc_nonfunc_dro_biv.jpg')
 
 with st.container():
     st.write('---')
-    st.markdown('##### 10 DSD Bivariate Map') 
+    st.markdown('##### 9 DSD Bivariate Map') 
     left_column, middle_column, right_column = st.columns(3)
     with left_column:
         st.write('Population with access to non-functional tank (%)')
-        st.image(image6, caption='', width=600)
+        st.image(image6, caption='', width=400)
         st.write('##')
     with middle_column:
         st.write('Population living under severe drought (%, 2011-2020)')
-        st.image(image7, caption='', width=600)
+        st.image(image7, caption='', width=400)
     with right_column:
         st.write('Access - Drought bivariate map')
-        st.image(image8, caption='', width=600)
+        st.image(image8, caption='', width=400)
         st.write('##')
 st.write('''
     - High non-accessibility (more than 60%) to functional tanks for DSDs in northern districts (Kilinochchi, Mullaitivu, Mannar, Vavunlya,  Batticaloa)
