@@ -27,7 +27,8 @@ st.write(
 tank_csv_file = 'undp_small_tanks_merged.csv'
 asc_csv_file = 'undp_small_tanks_merged_asc.csv'
 dist_csv_file = 'undp_small_tanks_merged_dist.csv'
-poverty_csv_file = 'HIES_poverty_agri.csv'
+agri_csv_file = 'HIES_poverty_agri.csv'
+poverty_csv_file = 'HIES_poverty_asc.csv'
 tank_df = pd.read_csv(os.path.join(tank_csv_file), encoding='utf-8')
 tank_df = tank_df.drop(index=(tank_df.loc[tank_df['merge_survey']=='Using only (2)']).index)
 
@@ -238,7 +239,7 @@ with st.container():
         st.plotly_chart(pop_func_bar)
 
 ### --- CORRELATION ANALYSIS: POVERTY
-dist_poverty_df = pd.read_csv(os.path.join(poverty_csv_file), encoding='utf-8')
+dist_poverty_df = pd.read_csv(os.path.join(agri_csv_file), encoding='utf-8')
 dist_poverty_df.columns=['districtname', 'Poverty rate 2002', 'Poverty rate 2012', 'District', 'Pct. HH in agriculture occupation', 'Pct. Population in agriculture occupation']
 dist_poverty_df = pd.merge(dist_df2, dist_poverty_df, on=['District'], how='inner').reset_index(drop=True)
 
