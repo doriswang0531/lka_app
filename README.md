@@ -9,9 +9,14 @@
 
 This piece of work is part of Sri Lanka Water Platform Diagnotics which is consist of Public Expenditure Review (PER), Economy Anlyaisis of WASH, predictive modeling for drought, itegrating flood and drought risks analysis and population at risk, analysis of CBOs, and aggregate water risk for Sri Lanka — drought, flood and water quality.
 
-Use the `BLANK_README.md` to get started.
-
+## APP Preview
 <img src='imgs\Screenshot.png' width="800">
+
+
+## Demo App
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://doriswang0531-lka-app-lka-app-o2vwi7.streamlit.app/)
+
 
 ## Acknowledgement
 
