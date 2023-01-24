@@ -1,4 +1,4 @@
-# lka_app
+# lka_tank_app
 > A Streamlit app of data analysis on small tanks in Sri Lanka
 
 <img src='imgs\tank.jpg' width="800">
