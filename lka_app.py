@@ -237,8 +237,8 @@ with st.container():
         st.plotly_chart(pop_func_bar)
 
 ### --- SPATIAL DISTRIBUTION: TANK FUNCTIONALITY
-image4 = Image.open('maps\dist_pop_agri.jpg')
-image5 = Image.open('maps\dist_pop_func.jpg')
+image4 = Image.open('maps/dist_pop_agri.jpg')
+image5 = Image.open('maps/dist_pop_func.jpg')
 
 with st.container():
     st.write('---')
@@ -312,9 +312,9 @@ with st.container():
         st.plotly_chart(asc_pov_sca, use_container_width=True, height=800)
 
 ### --- BIVARIATE MAP
-image6 = Image.open('asc_pop_nofunc.jpg')
-image7 = Image.open('asc_pop_dro.jpg')
-image8 = Image.open('asc_nonfunc_dro_biv.jpg')
+image6 = Image.open('maps/asc_pop_nofunc.jpg')
+image7 = Image.open('maps/asc_pop_dro.jpg')
+image8 = Image.open('maps/asc_nonfunc_dro_biv.jpg')
 
 with st.container():
     st.write('---')
