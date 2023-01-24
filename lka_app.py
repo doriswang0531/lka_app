@@ -236,7 +236,6 @@ with st.container():
         st.dataframe(dist_df2)
     with right_column:
         st.plotly_chart(pop_func_bar)
-st.write('Mallaitivu District with more than 70% population relied on agriculture, but only 21% are covered by a functional tank')
 
 ### --- CORRELATION ANALYSIS: POVERTY
 dist_poverty_df = pd.read_csv(os.path.join(poverty_csv_file), encoding='utf-8')
@@ -270,7 +269,6 @@ with st.container():
     with right_column:
         st.plotly_chart(dist_pov_sca)
 
-
 ### --- SPATIAL DISTRIBUTION: TANK FUNCTIONALITY
 image4 = Image.open('maps\dist_pop_agri.jpg')
 image5 = Image.open('maps\dist_pop_func.jpg')
@@ -287,10 +285,7 @@ with st.container():
         st.image(image5, caption='', width=600)
         st.write('##')
 
-st.write('''
-    - High non-accessibility (more than 60%) to functional tanks for DSDs in northern districts (Kilinochchi, Mullaitivu, Mannar, Vavunlya,  Batticaloa)​
-    - Dark brown shades show the DSDs with both high non-access and  experienced high level of drought frequency​
-''')
+st.write('Mallaitivu District with more than 70% population relied on agriculture, but only 21% are covered by a functional tank.')
 
 ### --- DSD LEVE ANALYSIS
 st.write('---')
@@ -367,3 +362,7 @@ with st.container():
         st.write('Access - Drought bivariate map')
         st.image(image8, caption='', width=600)
         st.write('##')
+st.write('''
+    - High non-accessibility (more than 60%) to functional tanks for DSDs in northern districts (Kilinochchi, Mullaitivu, Mannar, Vavunlya,  Batticaloa)
+    - Dark brown shades show the DSDs with both high non-access and  experienced high level of drought frequency
+''')
