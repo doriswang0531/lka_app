@@ -297,20 +297,6 @@ with st.container():
         st.write('Population Access to Functioning Tank (%)')
         st.plotly_chart(asc_bar, use_container_width=True)
 
-### --- SCATTER PLOT
-color_discrete_sequence = ['#cc61af']*len(mask_df)
-asc_pov_sca = px.scatter(mask_df, x='Access to functioning tank (%)', y='Estimated poverty headcount index (%)',  
-                 title='Access to Functioning Tank and Poverty Rate', color_discrete_sequence=color_discrete_sequence, trendline='ols',
-                 template='plotly_white')
-asc_pov_sca.update_layout(height=800)
-
-
-with st.container():
-    left_column, middle_column, right_column = st.columns((2, 5, 2))
-    with middle_column:
-        st.write('##')
-        st.plotly_chart(asc_pov_sca, use_container_width=True, height=800)
-
 ### --- BIVARIATE MAP
 image6 = Image.open('maps/asc_pop_nofunc.jpg')
 image7 = Image.open('maps/asc_pop_dro.jpg')
