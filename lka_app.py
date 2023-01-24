@@ -195,7 +195,7 @@ with st.container():
         st.image(image3, width=400)
         
  ### --- DATAFRAME: FUNCTIONALITY BY DISTRICT
-dist_df = pd.read_csv(os.path.join('dist_csv_file'), encoding='utf-8')
+dist_df = pd.read_csv(os.path.join(dist_csv_file), encoding='utf-8')
 dist_df = dist_df.dropna(subset=['districtname'])
 
 dist_df1 = dist_df[['districtname', 'dist_pop', 'dist_func', 'dist_damaged', 'dist_nonfunc']].sort_values(by=['dist_func']).reset_index(drop=True)
