@@ -29,11 +29,9 @@ asc_csv_file = 'undp_small_tanks_merged_asc.csv'
 dist_csv_file = 'undp_small_tanks_merged_dist.csv'
 agri_csv_file = 'HIES_poverty_agri.csv'
 poverty_csv_file = 'HIES_poverty_asc.csv'
+
 tank_df = pd.read_csv(os.path.join(tank_csv_file), encoding='utf-8')
 tank_df = tank_df.drop(index=(tank_df.loc[tank_df['merge_survey']=='Using only (2)']).index)
-
-### --- MAPS
-
 
 ### --- BACKGROUND
 st.markdown('#### Introduction')
@@ -238,43 +236,13 @@ with st.container():
     with right_column:
         st.plotly_chart(pop_func_bar)
 
-### --- CORRELATION ANALYSIS: POVERTY
-dist_poverty_df = pd.read_csv(os.path.join(agri_csv_file), encoding='utf-8')
-dist_poverty_df.columns=['districtname', 'Poverty rate 2002', 'Poverty rate 2012', 'District', 'Pct. HH in agriculture occupation', 'Pct. Population in agriculture occupation']
-dist_poverty_df = pd.merge(dist_df2, dist_poverty_df, on=['District'], how='inner').reset_index(drop=True)
-
-color_discrete_sequence = ['#99c945']*len(dist_poverty_df)
-dist_agri_sca = px.scatter(dist_poverty_df, x='Access to functioning tank', y='Pct. Population in agriculture occupation', size='Population', text='District', 
-                 title='Agriculture Occupation (%)', color_discrete_sequence=color_discrete_sequence, trendline='ols',
-                 labels={ 'Pct. Population in agriculture occupation': 'HIES population with agriculture occupation 2016 (%)', 
-                 'Access to functioning tank': 'Population with access to functioning tank (%)', 
-                 'Population': 'Population' })
-dist_agri_sca.update_traces(textposition='top center')
-
-
-color_discrete_sequence = ['#cc61af']*len(dist_poverty_df)
-dist_pov_sca = px.scatter(dist_poverty_df, x='Access to functioning tank', y='Poverty rate 2012', size='Population', text='District', 
-                 title='Poverty (%)', color_discrete_sequence=color_discrete_sequence, trendline='ols',
-                 labels={ 'Poverty rate 2012': 'HIES poverty head count 2012 (%)', 
-                 'Access to functioning tank': 'Population with access to functioning tank (%)', 
-                 'Population': 'Population' })
-dist_pov_sca.update_traces(textposition='top center')
-
-
-with st.container():
-    st.write('---')
-    st.markdown('##### 7 Tank Access, Agriculture Engagement and Poverty') 
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.plotly_chart(dist_agri_sca)
-    with right_column:
-        st.plotly_chart(dist_pov_sca)
-
 ### --- SPATIAL DISTRIBUTION: TANK FUNCTIONALITY
 image4 = Image.open('maps\dist_pop_agri.jpg')
 image5 = Image.open('maps\dist_pop_func.jpg')
 
 with st.container():
+    st.write('---')
+    st.markdown('##### 7 Tank Access, Agriculture Engagement and Poverty') 
     left_column, right_column = st.columns(2)
     with left_column:
         st.write('Population with Occupation in Agriculture Industry (%, HIES 2016)')
